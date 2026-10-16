@@ -1,0 +1,6 @@
+{
+  "name": "نصر الدين | مصمم جرافيك ومصمم هويات بصرية",
+  "description": "معرض أعمال نصر الدين - مصمم جرافيك ومصمم هويات بصرية وشعارات بخبرة تزيد عن 5 سنوات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

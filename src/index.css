@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark mode default (matching original olive & beige palette) */
+  --canvas-bg: #141c15;
+  --canvas-alt: #172118;
+  --header-bg: rgba(20, 28, 21, 0.92);
+  --header-scrolled-bg: rgba(20, 28, 21, 0.98);
+  --surface-card: #faf6f0;
+  --surface-card-text: #141c15;
+  --surface-card-muted: #4d5d4e;
+  --surface-card-border: #e5ddd2;
+  --stat-box-bg: #1c271d;
+  --stat-box-border: #2b3b2c;
+  --text-primary: #faf6f0;
+  --text-secondary: #c8bfb2;
+  --text-muted: #9a9082;
+  --border-subtle: #243325;
+  --border-card-hover: #374d38;
+  --inner-pill-bg: #efe9e0;
+  --inner-pill-border: #dfd6ca;
+  --footer-bg: #101711;
+  --footer-border: #223123;
+  --accent-orange: #d96528;
+  --accent-orange-hover: #c2551c;
+}
+
+html.light {
+  /* Light mode (warm beige, crisp ivory cards, deep olive typography, burnt orange accent) */
+  --canvas-bg: #f7f3ed;
+  --canvas-alt: #efe9e0;
+  --header-bg: rgba(247, 243, 237, 0.92);
+  --header-scrolled-bg: rgba(247, 243, 237, 0.98);
+  --surface-card: #ffffff;
+  --surface-card-text: #141c15;
+  --surface-card-muted: #4d5d4e;
+  --surface-card-border: #ded5c8;
+  --stat-box-bg: #ffffff;
+  --stat-box-border: #ddd4c6;
+  --text-primary: #141c15;
+  --text-secondary: #3b4b3d;
+  --text-muted: #667567;
+  --border-subtle: #ded5c8;
+  --border-card-hover: #c4b9a8;
+  --inner-pill-bg: #f4eee6;
+  --inner-pill-border: #dfd6c8;
+  --footer-bg: #ece5dc;
+  --footer-border: #dbd1c2;
+  --accent-orange: #d96528;
+  --accent-orange-hover: #c2551c;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html[dir="rtl"] {
+    font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html[dir="ltr"] {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--canvas-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--canvas-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3c523f;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d96528;
+  }
+}
